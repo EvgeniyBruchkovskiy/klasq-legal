@@ -1,0 +1,12 @@
+<!doctype html><html lang="uk"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Klasq — запрошення в клас</title><style>:root{color-scheme:light dark}body{margin:0;padding:48px 20px;font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#f4f1ff;color:#17122e}main{max-width:680px;margin:0 auto}h1{font-size:32px;margin:0 0 8px}h2{font-size:20px;margin:32px 0 8px}p,li{color:#3b3556}a{color:#6a4cff}hr{border:0;border-top:1px solid #d9d3f0;margin:48px 0}footer{margin-top:48px;font-size:14px;color:#6b6480}.code{font:700 40px/1.2 ui-monospace,Menlo,monospace;letter-spacing:6px;margin:16px 0}.btn{display:inline-block;padding:14px 22px;border-radius:14px;background:#6a4cff;color:#fff;text-decoration:none;font-weight:600;margin:6px 8px 6px 0}@media (prefers-color-scheme:dark){body{background:#0f0b1f;color:#eee9ff}p,li{color:#cbc4e6}a{color:#a996ff}hr{border-top-color:#2c2548}footer{color:#9d95ad}.btn{color:#fff}}</style></head><body><main>
+<h1>Тебе кличуть у клас</h1>
+<p>Встанови Klasq і введи код класу або відкрий запрошення в застосунку.</p>
+<div class="code" id="code">······</div>
+<p><a class="btn" id="open" href="klasq://join/">Відкрити в Klasq</a><a class="btn" href="https://apps.apple.com/app/id6816309179">Завантажити в App Store</a></p>
+<p lang="en">You've been invited to a class in Klasq. Install the app and enter the code above.</p>
+<footer><a href="../">Klasq</a></footer>
+</main>
+<script>
+var c=(new URLSearchParams(location.search).get("c")||"").toUpperCase().replace(/[^A-Z0-9]/g,"").slice(0,6);
+if(c){document.getElementById("code").textContent=c;var u="klasq://join/"+c;document.getElementById("open").href=u;setTimeout(function(){location.href=u},300);}
+</script></body></html>
